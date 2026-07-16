@@ -18,12 +18,52 @@ body{
     color:#333;
 }
 
-header{
-    background:#7b3f00;
-    color:white;
+.hero{
+    height:100vh;
+    background:url("hero-banner.png") center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:60px 20px;
-    url: hero.jpg;
+    position:relative;
+}
+
+.overlay{
+    background:rgba(0,0,0,.45);
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:24px;
+    margin-bottom:25px;
+}
+
+@media(max-width:768px){
+
+.hero{
+height:80vh;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:18px;
+}
+
 }
 
 header h1{
@@ -110,13 +150,17 @@ font-size:34px;
 </head>
 <body>
 
-<header>
+<header class="hero">
 
-<h1>C4 SPREADS</h1>
+    <div class="overlay">
 
-<p>Every Spoonful is a Sweet Delight!</p>
+        <h1>C4 SPREADS</h1>
 
-<a href="#contact" class="btn">Order Now</a>
+        <p>Every Spoonful is a Sweet Delight!</p>
+
+        <a href="#contact" class="btn">Order Now</a>
+
+    </div>
 
 </header>
 
